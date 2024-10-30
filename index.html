@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inversiones J.J</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Estilos para el body */
+      body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        background-color: #f4f4f9;
+      }
+
+      /* Header y logo */
+      header {
+        background-color: #00796b;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      header .logo img {
+        height: 80px;
+        width: auto;
+      }
+
+      header h1 {
+        margin-top: 10px;
+        font-size: 24px;
+      }
+
+      /* Sección de About */
+      .about {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .about h2 {
+        color: #00796b;
+        margin-bottom: 15px;
+      }
+
+      /* Catálogo de Productos */
+      .catalog {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .catalog h2 {
+        color: #00796b;
+        margin-bottom: 15px;
+      }
+
+      .products {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .product-item {
+        width: 200px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: white;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .product-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      .product-item p {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      .product-item:hover {
+        transform: scale(1.05);
+      }
+
+      .product-description {
+        display: none;
+        margin-top: 10px;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+        font-size: 14px;
+        color: #666;
+      }
+
+      /* Mostrar descripción al hacer clic */
+      .product-item.active .product-description {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header con logo -->
+    <header>
+      <div class="logo">
+        <img
+          src="https://cdn.eventtia.com/event_files/199523/original/logo-proarc-2024-blanc-transparent.png?1729677190"
+          alt="Logo de Inversiones J.J"
+        />
+        <h1>Inversiones J.J</h1>
+      </div>
+    </header>
+
+    <!-- Sección de Misión, Visión y Descripción -->
+
+    <!-- Catálogo de productos -->
+    <section class="catalog">
+      <h2>Catálogo de Productos</h2>
+      <div class="products">
+        <div class="product-item" onclick="toggleDescription('desc1')">
+          <img src="producto1.jpg" alt="Producto 1" />
+          <p>Conjunto Deportivo EcoFit</p>
+          <div id="desc1" class="product-description">
+            <p>
+              Conjunto deportivo hecho de plástico reciclado, transpirable y
+              resistente. Ideal para entrenamientos intensos.
+            </p>
+            <p><strong>Precio:</strong> $45</p>
+          </div>
+        </div>
+        <div class="product-item" onclick="toggleDescription('desc2')">
+          <img src="producto2.jpg" alt="Producto 2" />
+          <p>Playera Deportiva Reciclada</p>
+          <div id="desc2" class="product-description">
+            <p>
+              Playera suave y ligera, fabricada con materiales 100% reciclados,
+              perfecta para el día a día.
+            </p>
+            <p><strong>Precio:</strong> $25</p>
+          </div>
+        </div>
+        <div class="product-item" onclick="toggleDescription('desc3')">
+          <img src="producto3.jpg" alt="Producto 3" />
+          <p>Leggings Eco-Active</p>
+          <div id="desc3" class="product-description">
+            <p>
+              Leggings cómodos y elásticos, confeccionados con plástico
+              reciclado, ideales para actividades de alto rendimiento.
+            </p>
+            <p><strong>Precio:</strong> $35</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <h2>Sobre Nosotros</h2>
+      <p>
+        <strong>Misión:</strong> Ofrecer ropa deportiva sostenible hecha de
+        plástico reciclado, comprometidos con el cuidado del medio ambiente.
+      </p>
+      <p>
+        <strong>Visión:</strong> Ser líderes en el mercado de ropa deportiva
+        ecológica, ayudando a reducir la contaminación plástica.
+      </p>
+      <p>
+        Inversiones J.J transforma plástico reciclado en ropa deportiva moderna
+        y funcional, diseñada para atletas y personas activas.
+      </p>
+    </section>
+    <script>
+      function toggleDescription(id) {
+        const product = document.getElementById(id).parentElement;
+        product.classList.toggle('active');
+      }
+    </script>
+  </body>
+</html>
