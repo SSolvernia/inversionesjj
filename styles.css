@@ -31,7 +31,7 @@ header h1 {
 
 /* Sección de About */
 .about {
-  padding: 20px;
+  padding: 20px 20px 50px 20px;
   text-align: center;
 }
 
@@ -67,6 +67,12 @@ header h1 {
   background-color: white;
   text-align: center;
   transition: transform 0.3s;
+}
+
+@media (max-width: 600px) {
+  .product-item {
+    flex:none;
+  }
 }
 
 .product-item img {
