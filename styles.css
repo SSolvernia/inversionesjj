@@ -59,6 +59,7 @@ header h1 {
 }
 
 .product-item {
+  flex: 1 1 calc(33.33% - 20px);
   width: 200px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -70,7 +71,7 @@ header h1 {
 
 .product-item img {
   max-width: 100%;
-  height: auto;
+  height: 200px;
   border-radius: 5px;
 }
 
